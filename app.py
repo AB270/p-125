@@ -3,9 +3,9 @@ from classifier import get_prediction
 
 app = Flask(__name__)
 
-@app.route("/predict-letter",methods=["POST"])
+@app.route("/predict-alphabet",methods=["POST"])
 def predict_data():
-    image = request.files.get("letter")
+    image = request.files.get("alphabet")
     prediction = get_prediction(image)
     return jsonify({
         "prediction":prediction
